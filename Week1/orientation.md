@@ -5,9 +5,9 @@
 객체지향
 
 ## 구성
-JDK(Java Development Kit)
-JRE(Java Runtime Enviroment)
-JVM(Java Virtual Machine)
+- JDK(Java Development Kit)
+- JRE(Java Runtime Enviroment)
+- JVM(Java Virtual Machine)
 
 Os에 관계없이 컴파일 가능
 
