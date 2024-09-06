@@ -4,7 +4,6 @@
 ### 05 ~ 08
 객체지향
 
-
 ## 구성
 JDK(Java Development Kit)
 JRE(Java Runtime Enviroment)
@@ -19,7 +18,7 @@ Os에 관계없이 컴파일 가능
 ## 이클립스 실행
 
 1. *File - New - Java Project* 생성
-2. *src - New - Class* 생성 (*public static void main(String[] args)*에 체크)
+2. *src - New - Class* 생성 (*public static void main(String[] args)* 체크)
 3. `System.out.println("Hello, World");` 작성
 
 
