@@ -3,9 +3,9 @@ package ch05.sec03;
 public class Star {
 
 	public static void main(String[] args) {
-		int starNum = 10;
-		for (int i = 0; i < starNum; i++) {
-			for (int j = starNum - 1; j > i; j--) {
+		int starNum = 5;
+		for (int i=0; i < starNum; i++) {
+			for (int j=0; j < starNum - 1 - i; j++) {
 				System.out.print(" ");
 			}
 			for (int k = 0; k < i + 1; k++) {
@@ -17,7 +17,7 @@ public class Star {
 			for (int j = 0; j < i; j++) {
 				System.out.print(" ");
 			}
-			for (int k = starNum; k > i; k--) {
+			for (int k = 0; k < starNum - i; k++) {
 				System.out.print("*");
 			}
 			System.out.println("");

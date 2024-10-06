@@ -9,6 +9,8 @@ public class StringPractice2 {
 		String[] tokens1 = sStudent1.split(", ");
 		String[] tokens2 = sStudent2.split(", ");
 		
+		String[][] tokensArray = {tokens1, tokens2};
+		
 		int sumMath = 0;
 		int sumCalc = 0;
 		int sumScience = 0;
@@ -17,45 +19,40 @@ public class StringPractice2 {
 		float meanCalc = 0;
 		float meanScience = 0;
 		
-		for (int i = 0; i<tokens1.length; i++) {
+		for (int i=0; i<tokens1.length; i++) {
 			if (tokens1[i].contains("math")) {
-				String mathScore = tokens1[i].replace("math:", "");
-				sumMath += Integer.parseInt(mathScore);
-			}
-			if (tokens1[i].contains("math")) {
-				String calcScore = tokens1[i].replace("calc:", "");
-				sumCalc += Integer.parseInt(calcScore);
-			}
-			if (tokens1[i].contains("math")) {
-				String scienceScore = tokens1[i].replace("science:", "");
-				sumScience += Integer.parseInt(scienceScore);
+				sumMath += Integer.parseInt(tokens1[i].replace("math:", ""));
+			} else if (tokens1[i].contains("calc")) {
+				sumCalc += Integer.parseInt(tokens1[i].replace("calc:", ""));
+			} else if (tokens1[i].contains("science")) {
+				sumScience += Integer.parseInt(tokens1[i].replace("science:", ""));
+			} else {
+				
 			}
 		}
 		
-		for (int i = 0; i<tokens2.length; i++) {
-			int indexMath = tokens2[i].indexOf("math");
-			int indexCalc = tokens2[i].indexOf("calc");
-			int indexScience = tokens2[i].indexOf("science");
-			
-			String mathScore = tokens2[indexMath].replace("math:", "");
-			String calcScore = tokens2[indexCalc].replace("calc:", "");
-			String scienceScore = tokens2[indexScience].replace("science:", "");
-			
-			sumMath += Integer.parseInt(mathScore);
-			sumCalc += Integer.parseInt(calcScore);
-			sumScience += Integer.parseInt(scienceScore);
+		for (int i=0; i<tokens2.length; i++) {
+			if (tokens2[i].contains("math")) {
+				sumMath += Integer.parseInt(tokens2[i].replace("math:", ""));
+			} else if (tokens2[i].contains("calc")) {
+				sumCalc += Integer.parseInt(tokens2[i].replace("calc:", ""));
+			} else if (tokens2[i].contains("science")) {
+				sumScience += Integer.parseInt(tokens2[i].replace("science:", ""));
+			} else {
+				
+			}
 		}
 		
-		meanMath = (float)sumMath / 2.0f;
-		meanCalc = (float)sumCalc / 2.0f;
-		meanScience = (float)sumScience / 2.0f;
+		meanMath = (float)sumMath / (float)tokensArray.length;
+		meanCalc = (float)sumCalc / (float)tokensArray.length;
+		meanScience = (float)sumScience / (float)tokensArray.length;
 		
 		System.out.println("sumMath: " + sumMath);
 		System.out.println("sumCalc: " + sumCalc);
 		System.out.println("sumScience: " + sumScience);
-		System.out.printf("meanMath: %10.2f", meanMath);
-		System.out.printf("meanCalc: %10.2f", meanCalc);
-		System.out.printf("meanScience: %10.2f", meanScience);
+		System.out.printf("meanMath: %10.2f\n", meanMath);
+		System.out.printf("meanCalc: %10.2f\n", meanCalc);
+		System.out.printf("meanScience: %10.2f\n", meanScience);
 		
 	}
 
