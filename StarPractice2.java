@@ -3,7 +3,7 @@ package ch06.sec01;
 public class StarPractice2 {
 
 	public static void main(String[] args) {
-		int col = 21;
+		int col = 25;
 		int row = (col + 1) / 2;
 		
 		for (int r = 0; r < row; r++) {
