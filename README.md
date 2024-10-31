@@ -18,7 +18,7 @@ javac HelloWorld.java
 ```
 ### 2. .class 파일 실행
 
-- 컴파일이 완료되면, HelloWorld.class 파일이 생성됩니다.
+- 컴파일이 완료되면, `HelloWorld.class` 파일이 생성됩니다.
 - 다음 명령어를 입력하여 실행합니다:
 
 ```bash
