@@ -46,14 +46,14 @@ public class NumberCounter {
 		System.out.println("각 숫자의 발생 횟수:");
 		for (int i = 0; i < 10; i++) {
 			System.out.println(i + ": " + numberCounts[i] + "번");
-			
-			// 각 숫자의 발생 횟수:
-			// 0: 1번
-			// 1: 3번
-			// 2: 2번
-			// ...
-			// 9: 0번
 		}
+		
+		// 각 숫자의 발생 횟수:
+		// 0: 1번
+		// 1: 3번
+		// 2: 2번
+		// ...
+		// 9: 0번
 
 		scanner.close(); // 스캐너 종료
 	}
