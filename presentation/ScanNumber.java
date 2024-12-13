@@ -3,48 +3,48 @@ package pack1;
 import java.util.Scanner;
 
 public class ScanNumber {
-	public void scanNumber(int start, int stop, int num) { // °´Ã¼¸¦ »ı¼ºÇÏÁö ¾Ê°íµµ »ç¿ëÇÒ ¼ö ÀÖµµ·Ï staticÀ¸·Î ¼³Á¤
-		Scanner scanner = new Scanner(System.in); // ½ºÄ³³Ê °´Ã¼ »ı¼º
-		int[] numberCounts = new int[stop - start]; // 0~9 °¢°¢ÀÇ ¼ıÀÚ°¡ ¸î ¹ø¾¿ ¹ß»ıÇÏ¿´´ÂÁö ÀúÀåÇÒ ¹è¿­ »ı¼º
+	public void scanNumber(int start, int stop, int num) { // ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šê³ ë„ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ staticìœ¼ë¡œ ì„¤ì •
+		Scanner scanner = new Scanner(System.in); // ìŠ¤ìºë„ˆ ê°ì²´ ìƒì„±
+		int[] numberCounts = new int[stop - start]; // (0, 10, num)ì¼ ë•Œ, 0~9 ê°ê°ì˜ ìˆ«ìê°€ ëª‡ ë²ˆì”© ë°œìƒí•˜ì˜€ëŠ”ì§€ ì €ì¥í•  ë°°ì—´ ìƒì„±
 		
-		System.out.println(start + "ºÎÅÍ " + (stop - 1) + "±îÁöÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä (ÁßÁöÇÏ·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä):"); // ¾È³»¹® Ãâ·Â
+		System.out.println(start + "ë¶€í„° " + (stop - 1) + "ê¹Œì§€ì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” (ì¤‘ì§€í•˜ë ¤ë©´ që¥¼ ì…ë ¥í•˜ì„¸ìš”):"); // ì•ˆë‚´ë¬¸ ì¶œë ¥
 		
-		int count = 0; // while ¹®¿¡¼­ »ç¿ëÇÒ º¯¼ö
-		while (count < num) { // (count < 20): 0ºÎÅÍ 19±îÁö ¹İº¹ÇÏÁö¸¸ Àß¸øµÈ ÀÔ·ÂÀÏ °æ¿ì ¹«È¿
-			String sInputVal = scanner.nextLine(); // ÀÔ·ÂÀ» º¯¼ö sInputVal¿¡ ÀúÀå
-			try { // sInputValÀÌ ¼ıÀÚ·Î º¯È¯ °¡´ÉÇÑ °æ¿ì
-				int iInputVal = Integer.parseInt(sInputVal); // ¹®ÀÚ¿­ sInputValÀ» Á¤¼öÇü iInputVal·Î º¯È¯
+		int count = 0; // while ë¬¸ì—ì„œ ì‚¬ìš©í•  ë³€ìˆ˜
+		while (count < num) { // (count < 20): 0ë¶€í„° 19ê¹Œì§€ ë°˜ë³µí•˜ì§€ë§Œ ì˜ëª»ëœ ì…ë ¥ì¼ ê²½ìš° ë¬´íš¨
+			String sInputVal = scanner.nextLine(); // ì…ë ¥ì„ ë³€ìˆ˜ sInputValì— ì €ì¥
+			try { // sInputValì´ ìˆ«ìë¡œ ë³€í™˜ ê°€ëŠ¥í•œ ê²½ìš°
+				int iInputVal = Integer.parseInt(sInputVal); // ë¬¸ìì—´ sInputValì„ ì •ìˆ˜í˜• iInputValë¡œ ë³€í™˜
 				
-				if (iInputVal >= 0 && iInputVal < 10) { // º¯È¯ÇÑ °ªÀÌ 0~9ÀÎ °æ¿ì
-			    	numberCounts[iInputVal - start]++; // ÇØ´ç °ªÀÇ ¹ß»ı È½¼ö¸¦ Áõ°¡
-			    	count++; // while ¹®ÀÇ count Áõ°¡
-			    } else { // º¯È¯ÇÑ °ªÀÌ 0~9°¡ ¾Æ´Ñ °æ¿ì ¹«È¿
-			        System.out.println(start + "ºÎÅÍ " + (stop - 1) + "±îÁöÀÇ ¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä (ÁßÁöÇÏ·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä):");
-			        // ¹«È¿ÀÌ±â ¶§¹®¿¡ count++ ÇÏÁö ¾Ê°í ÁÖÀÇ¹® Ãâ·Â
+				if (iInputVal >= 0 && iInputVal < 10) { // ë³€í™˜í•œ ê°’ì´ 0~9ì¸ ê²½ìš°
+			    	numberCounts[iInputVal - start]++; // í•´ë‹¹ ê°’ì˜ ë°œìƒ íšŸìˆ˜ë¥¼ ì¦ê°€
+			    	count++; // while ë¬¸ì˜ count ì¦ê°€
+			    } else { // ë³€í™˜í•œ ê°’ì´ 0~9ê°€ ì•„ë‹Œ ê²½ìš° ë¬´íš¨
+			        System.out.println(start + "ë¶€í„° " + (stop - 1) + "ê¹Œì§€ì˜ ìˆ«ìë§Œ ì…ë ¥í•˜ì„¸ìš” (ì¤‘ì§€í•˜ë ¤ë©´ që¥¼ ì…ë ¥í•˜ì„¸ìš”):");
+			        // ë¬´íš¨ì´ê¸° ë•Œë¬¸ì— count++ í•˜ì§€ ì•Šê³  ì£¼ì˜ë¬¸ ì¶œë ¥
 			    }
 				
-			} catch (Exception e) { // sInputValÀÌ ¼ıÀÚ°¡ µÉ ¼ö ¾ø´Â °æ¿ì
-				if (sInputVal.equals("q")) { // ÀÔ·ÂÀÌ qÀÎ °æ¿ì
-					break; // while ¹®À» Á¾·áÇÕ´Ï´Ù
+			} catch (Exception e) { // sInputValì´ ìˆ«ìê°€ ë  ìˆ˜ ì—†ëŠ” ê²½ìš°
+				if (sInputVal.equals("q")) { // ì…ë ¥ì´ qì¸ ê²½ìš°
+					break; // while ë¬¸ì„ ì¢…ë£Œí•©ë‹ˆë‹¤
 				}
-				System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä (ÁßÁöÇÏ·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä):");
-				// ¹®ÀÚ¿­ÀÎ °æ¿ì ¹«È¿ÀÌ±â ¶§¹®¿¡ count++ ÇÏÁö ¾Ê°í ÁÖÀÇ¹® Ãâ·Â
+				System.out.println("ìˆ«ìë§Œ ì…ë ¥í•˜ì„¸ìš” (ì¤‘ì§€í•˜ë ¤ë©´ që¥¼ ì…ë ¥í•˜ì„¸ìš”):");
+				// ë¬¸ìì—´ì¸ ê²½ìš° ë¬´íš¨ì´ê¸° ë•Œë¬¸ì— count++ í•˜ì§€ ì•Šê³  ì£¼ì˜ë¬¸ ì¶œë ¥
 			}
 		}
 
-		// while ¹®ÀÌ Á¾·áµÇ¸é °á°ú Ãâ·Â
-		System.out.println("°¢ ¼ıÀÚÀÇ ¹ß»ı È½¼ö:");
+		// while ë¬¸ì´ ì¢…ë£Œë˜ë©´ ê²°ê³¼ ì¶œë ¥
+		System.out.println("ê° ìˆ«ìì˜ ë°œìƒ íšŸìˆ˜:");
 		for (int i = 0; i < 10; i++) {
-			System.out.println(i + ": " + numberCounts[i + start] + "¹ø");
+			System.out.println(i + ": " + numberCounts[i + start] + "ë²ˆ");
 		}
 		
-		// °¢ ¼ıÀÚÀÇ ¹ß»ı È½¼ö:
-		// 0: 1¹ø
-		// 1: 3¹ø
-		// 2: 2¹ø
+		// ê° ìˆ«ìì˜ ë°œìƒ íšŸìˆ˜:
+		// 0: 1ë²ˆ
+		// 1: 3ë²ˆ
+		// 2: 2ë²ˆ
 		// ...
-		// 9: 0¹ø
+		// 9: 0ë²ˆ
 
-		scanner.close(); // ½ºÄ³³Ê Á¾·á
+		scanner.close(); // ìŠ¤ìºë„ˆ ì¢…ë£Œ
 	}
 }
