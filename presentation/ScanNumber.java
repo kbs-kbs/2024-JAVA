@@ -15,7 +15,7 @@ public class ScanNumber {
 			try { // sInputVal이 숫자로 변환 가능한 경우
 				int iInputVal = Integer.parseInt(sInputVal); // 문자열 sInputVal을 정수형 iInputVal로 변환
 				
-				if (iInputVal >= 0 && iInputVal < 10) { // 변환한 값이 0~9인 경우
+				if (iInputVal >= start && iInputVal < stop) { // 변환한 값이 0~9인 경우
 			    	numberCounts[iInputVal - start]++; // 해당 값의 발생 횟수를 증가
 			    	count++; // while 문의 count 증가
 			    } else { // 변환한 값이 0~9가 아닌 경우 무효
