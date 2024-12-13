@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class NumberCounter {
 
-	public static void main(String[] args) { // ¸ŞÀÎ ÇÔ¼ö
+	public static void main(String[] args) { // ë©”ì¸ í•¨ìˆ˜ì—ì„œ ScanNumber í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì€  ScanDigit í´ë˜ìŠ¤ì˜ scanDigit ë©”ì„œë“œë¥¼ í˜¸ì¶œ
 		
-		// 0~9 »çÀÌÀÇ ·£´ı ¼ıÀÚ¸¦ 20¹ø ÀÔ·Â ¹Ş¾Æ
-		// º¯¼ö sInputVal¿¡ µî·ÏÇÏ°í
-		// °¢°¢ÀÇ ¼ıÀÚ°¡ ¸î ¹ø¾¿ ¹ß»ıÇÏ¿´´ÂÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥
+		// 0~9 ì‚¬ì´ì˜ ëœë¤ ìˆ«ìë¥¼ 20ë²ˆ ì…ë ¥ ë°›ì•„
+		// ë³€ìˆ˜ sInputValì— ë“±ë¡í•˜ê³ 
+		// ê°ê°ì˜ ìˆ«ìê°€ ëª‡ ë²ˆì”© ë°œìƒí•˜ì˜€ëŠ”ì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨
 		
 		ScanDigit sd = new ScanDigit();
-		sd.scanDigit(20); // 20¹ø ÀÔ·Â ¹ŞÀ½
+		sd.scanDigit(20); // 20ë²ˆ ì…ë ¥ ë°›ìŒ
 	}
 }
