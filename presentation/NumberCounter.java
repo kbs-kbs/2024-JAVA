@@ -10,7 +10,7 @@ public class NumberCounter {
 		// 변수 sInputVal에 등록하고
 		// 각각의 숫자가 몇 번씩 발생하였는지 출력하는 프로그램
 		
-		ScanNumber sn = new ScanNumber();
-		sn.scanNumber(1, 7, 5); // 20번 입력 받음
+		ScanDigit sd = new ScanDigit();
+		sd.scanDigit(20); // 20번 입력 받음
 	}
 }
